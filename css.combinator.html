@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+</head>
+<style>
+    /* descendant combinator (space) */
+    .container p{
+        color: rgb(125, 172, 78);
+        font-size: 18px;
+    }
+    /* child combinator (>) */
+    .container > p{
+        color: cornflowerblue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    /* adjacent sibling combinator (+) */
+    .first + .second{
+        color: cadetblue;
+        font-style: italic;
+    }
+    /* general siblings combinator(~) */
+    .heading ~ .para{
+    color: rgb(218, 100, 100);
+        font-family: cursive;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 class="heading">heading1</h1>
+        <p class="first">this is first paragraph (adjacent sibling will affect the next one)</p>
+        <p class="second">this is second paragraph(affected by adjacent sibling)</p>
+        <p class="second">this is other second paragraph(affected by adjacent sibling)</p>
+        <p class="third">this is third paragraph(not affected by adjacent sibling)</p>
+
+    </div>
+    <div class="other container">
+<h2 class="heading">heading2</h2>
+<p class="para">this paragraph comes after heading 2</p>
+<p class="para">another paragraph after heading 2</p>
+<p class="para"> yet another paragraph after heading 2</p>
+    </div>
+</body>
+</html>
