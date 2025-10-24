@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+</body>
+<div id="message">this is a message</div>
+<div class="info">this is a info div</div>
+<button class="btn">Click me</button>
+<script>
+    $(document).ready(function () {
+        // ID SELECTOR
+        $("#message").css("color", "blue");
+        //CLASS SELECTOR
+        $(".info").css("background-color", "yellow");
+        //ELEMENT SELECTOR
+        $("button").css("font-size", "50px");
+        $("button").css("background-color", "pink");
+    });
+
+
+</script>
+
+</html>
