@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event binding</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+    <!-- click event -->
+    <button id="clickbtn">Click event</button>
+    <p id="message"></p>
+
+    <script>
+        $("#clickbtn").click(function () {
+            $("#message").text("button was clicked!");
+            $('#message').css('background-color', 'yellow');
+        });
+    </script>
+
+    <!-- hover event -->
+    <div id="box">Hover over me!</div>
+    <script>
+        $("#box").hover(function () {
+            $(this).css("background-color", "pink");
+        }, function () {
+            $(this).css("background-color", "aqua");
+        });
+
+
+
+    </script>
+
+    <!-- // focus event -->
+    <input type="text" id="inputfeild" placeholder="focus on me!">;
+    <script>
+        $("#inputfeild").focus(function () {
+            $(this).css("background-color", "lightgreen")
+        });
+
+
+    </script>
+    <!-- blur event -->
+    <script>
+        $("#inputfeild").blur(function () {
+            $(this).css("background-color", "grey");
+        });
+    </script>
+</body>
+
+</html>
